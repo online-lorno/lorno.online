@@ -1,4 +1,11 @@
+import { Fira_Code } from 'next/font/google'
+
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import './globals.css'
+import 'remixicon/fonts/remixicon.css'
+
+const fira = Fira_Code({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${fira.className} text-size-body`}>
+        <div className="w- rounded-lg border border-color-line-50 bg-color-primary-100">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
