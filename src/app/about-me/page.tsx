@@ -1,3 +1,9 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Me',
+}
+
 export default function PageAboutMe() {
   return (
     <div className="flex min-h-[calc(100vh_-_113px)] w-full items-center justify-center">
