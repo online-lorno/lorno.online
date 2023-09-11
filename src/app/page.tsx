@@ -16,7 +16,7 @@ export default function PageHome() {
         <p className="mb-20 text-size-subheadline text-color-secondary-200">
           &gt; Full Stack Developer
         </p>
-        <p className="mb-2 text-size-label text-color-secondary-50">
+        <p className="mb-2 text-size-label">
           &#47;&#47; you can also see it on my Github page
         </p>
         <p className="text-size-label">

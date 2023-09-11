@@ -23,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fira.className} text-size-body`}>
+      <body
+        className={`${fira.className} text-size-body text-color-secondary-50`}
+      >
         <div className="w- rounded-lg border border-color-line-50 bg-color-primary-100">
           <Header />
           <main>{children}</main>
