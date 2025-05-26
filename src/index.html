@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonard Laput | Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .project-card {
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .project-card:hover {
+      box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-badge {
+      transition: all 0.2s ease;
+    }
+
+    .skill-badge:hover {
+      transform: scale(1.05);
+    }
+
+    .theme-toggle {
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: rotate(30deg);
+    }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+  <!-- Header/Navigation -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold gradient-text">Leonard Laput</a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+          <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
+          <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a>
+          <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+          <svg id="theme-icon" class="w-5 h-5 text-gray-800 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20">
+            <path id="theme-path" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+        </button>
+        <button class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="block text-lg md:text-xl mb-4 text-blue-600 dark:text-blue-400">I am</span>
+        <span id="typed" class="gradient-text"></span>
+      </h1>
+      <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-8 text-gray-600 dark:text-gray-300">
+        Building digital experiences that are fast, accessible, and visually appealing.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#projects"
+          class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition shadow-lg">
+          View My Work
+        </a>
+        <a href="#contact"
+          class="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-full transition">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div
+              class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
+              <div class="w-full h-full rounded-full bg-white dark:bg-gray-900 overflow-hidden">
+                <!-- Placeholder for profile image -->
+                <div class="w-full h-full flex items-center justify-center text-4xl">
+                  <span class="gradient-text">LL</span>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-700 p-3 rounded-full shadow-lg">
+              <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white">
+                <i class="fas fa-code text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0">
+          <h3 class="text-2xl font-semibold mb-4">Full Stack Developer with 5+ years of experience</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            I specialize in building modern web applications using React, Node.js, and various headless CMS solutions.
+            My passion lies in creating seamless user experiences while ensuring robust backend architecture.
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            With expertise in both frontend and backend development, I bridge the gap between beautiful design and
+            functional, scalable systems. I'm particularly experienced in Headless Shopify implementations and
+            e-commerce solutions.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <div class="flex items-center">
+              <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+              <span>Available for freelance</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+              <span>Open to full-time roles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <!-- HTML -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">HTML5</span>
+        </div>
+
+        <!-- CSS -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">CSS3</span>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript" class="w-full h-full" />
+          </div>
+          <span class="font-medium">JavaScript</span>
+        </div>
+
+        <!-- React -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">ReactJS</span>
+        </div>
+
+        <!-- React Native -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">React Native</span>
+        </div>
+
+        <!-- Node.js -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">Node.js</span>
+        </div>
+
+        <!-- NestJS -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="NestJS"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">NestJS</span>
+        </div>
+
+        <!-- Next.js -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">Next.js</span>
+        </div>
+
+        <!-- Shopify -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg" alt="Shopify"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">Headless Shopify</span>
+        </div>
+
+        <!-- REST API -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <i class="fas fa-server text-4xl text-blue-500"></i>
+          </div>
+          <span class="font-medium">REST API</span>
+        </div>
+
+        <!-- GraphQL -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL"
+              class="w-full h-full" />
+          </div>
+          <span class="font-medium">GraphQL API</span>
+        </div>
+
+        <!-- Open Source -->
+        <div class="skill-badge flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+          <div class="w-16 h-16 mb-4">
+            <i class="fas fa-code-branch text-4xl text-purple-500"></i>
+          </div>
+          <span class="font-medium">Open Source</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <!-- ECMaid -->
+        <div class="project-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+          <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+            <i class="fas fa-users text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">ECMaid</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Human Resource Management Software for Maid Agencies in Singapore. Streamlines the entire workflow from
+              recruitment to deployment.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">React</span>
+              <span
+                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Node.js</span>
+              <span
+                class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">MongoDB</span>
+            </div>
+            <a href="https://www.ecmaid.com/" target="_blank"
+              class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+              Visit Website <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Emmy -->
+        <div class="project-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+          <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+            <i class="fas fa-tshirt text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Emmy</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              A leading Nordic marketplace for pre-owned premium clothing. Features advanced search, authentication, and
+              payment processing.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Next.js</span>
+              <span
+                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">NestJS</span>
+              <span
+                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">PostgreSQL</span>
+            </div>
+            <a href="https://emmystore.com/" target="_blank"
+              class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+              Visit Website <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- The First Refresh -->
+        <div class="project-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+          <div class="h-48 bg-gradient-to-r from pink-500 to-red-500 flex items-center justify-center">
+            <i class="fas fa-spa text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">The First Refresh</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              A beauty service company in Singapore using Shopify to sell services. Customized headless implementation
+              with appointment booking.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Shopify</span>
+              <span
+                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">React</span>
+              <span
+                class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">GraphQL</span>
+            </div>
+            <a href="https://thefirstrefresh.com/" target="_blank"
+              class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+              Visit Website <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- The SDG Co -->
+        <div class="project-card bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+          <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+            <i class="fas fa-leaf text-white text-6xl"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">The SDG Co</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              A sustainability innovation marketplace for SDG-aligned startups and investors. Features complex data
+              visualization and matching algorithms.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">React</span>
+              <span
+                class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Node.js</span>
+              <span
+                class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">Firebase</span>
+            </div>
+            <a href="https://thesdg.co" target="_blank"
+              class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+              Visit Website <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+      <div class="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 bg-gradient-to-br from-blue-500 to-purple-600 p-8 text-white">
+            <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+            <p class="mb-6">Feel free to reach out if you're looking for a developer, have a question, or just want to
+              connect.</p>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-4 text-xl"></i>
+                <span>hello@leonardlaput.com</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-4 text-xl"></i>
+                <span>Singapore</span>
+              </div>
+            </div>
+            <div class="mt-8 flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <form>
+              <div class="mb-4">
+                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                <input type="text" id="name"
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" id="email"
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                <textarea id="message" rows="4"
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <a href="#" class="text-2xl font-bold gradient-text">Leonard Laput</a>
+          <p class="mt-2 text-gray-400">Full Stack Developer & Headless Shopify Expert</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Leonard Laput. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Typing Animation
+    document.addEventListener('DOMContentLoaded', function () {
+      const typed = new Typed('#typed', {
+        strings: [
+          'Leonard Laput',
+          'Full Stack Developer',
+          'React & NodeJS Specialist',
+          'Headless Shopify Expert',
+          'Open Source Contributor',
+          'Lifelong Learner'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+
+      // Theme Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const themePath = document.getElementById('theme-path');
+
+      // Function to set the theme
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+          themePath.setAttribute('d', 'M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+          themePath.setAttribute('d', 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z');
+        }
+      }
+
+      // Check for saved theme preference
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+
+      // Toggle theme on button click
+      themeToggle.addEventListener('click', function () {
+        if (document.documentElement.classList.contains('dark')) {
+          setTheme('light');
+        } else {
+          setTheme('dark');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
